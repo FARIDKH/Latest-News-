@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ee7-xx-xpm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Latest_News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="JGo-NY-d0M">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="wBH-W6-xRZ">
+                                <rect key="frame" x="80" y="620" width="215" height="37"/>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYk-xI-WuR">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wBH-W6-xRZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="9uj-eo-PIm"/>
+                            <constraint firstItem="JGo-NY-d0M" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LdT-AP-OY3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wBH-W6-xRZ" secondAttribute="trailing" constant="80" id="WYO-dd-6df"/>
+                            <constraint firstItem="JGo-NY-d0M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ajC-QW-Km2"/>
+                            <constraint firstItem="ZYk-xI-WuR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="asM-fa-JHD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZYk-xI-WuR" secondAttribute="trailing" id="meL-oO-9Uy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZYk-xI-WuR" secondAttribute="bottom" id="slB-D9-U0O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wBH-W6-xRZ" secondAttribute="bottom" constant="10" id="u7a-pe-rf1"/>
+                            <constraint firstItem="ZYk-xI-WuR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wcV-vj-wUh"/>
+                            <constraint firstItem="JGo-NY-d0M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zC5-AL-dlU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JLP-jE-nyi">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="4EN-by-qkg">
+                            <connections>
+                                <action selector="searchIsClicked:" destination="BYZ-38-t0r" id="e7i-Yf-34M"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pageControl" destination="wBH-W6-xRZ" id="fme-VY-TKC"/>
+                        <outlet property="scrollSlideView" destination="ZYk-xI-WuR" id="e5i-0b-Zfo"/>
+                        <outlet property="searchBar" destination="JGo-NY-d0M" id="raf-pp-Tbc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="372" y="32.833583208395808"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Hy7-bK-ADR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ee7-xx-xpm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y2h-LI-fUX">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Flg-S2-EdF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dyw-el-ja7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-590" y="33"/>
+        </scene>
+    </scenes>
+</document>
